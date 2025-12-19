@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Community Chat API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/auth/discord": {
+      "get": {
+        "summary": "Redirect to Discord OAuth2 login",
+        "responses": {
+          "302": { "description": "Redirect to Discord" }
+        }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "summary": "Get current user",
+        "responses": {
+          "200": { "description": "User information" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/api/hubs": {
+      "get": {
+        "summary": "Get hubs for the current user",
+        "responses": { "200": { "description": "List of hubs" } }
+      },
+      "post": {
+        "summary": "Create a new hub",
+        "requestBody": { "required": true },
+        "responses": { "201": { "description": "Hub created" } }
+      }
+    }
+  }
+}
+
+TODO: Expand OpenAPI specification for all endpoints

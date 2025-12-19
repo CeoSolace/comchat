@@ -1,0 +1,60 @@
+System Architecture
+
+The community chat platform is composed of two services: a backend API server and a frontend client. The backend is an Express application with Socket.IO for real‑time communication. It connects to MongoDB Atlas using Mongoose. The frontend is a Next.js application using React and TailwindCSS. The two services communicate via REST and WebSocket protocols. The deployment is defined in `render.yaml` using Render’s blueprint syntax.
+
+The backend exposes REST endpoints under `/api` and establishes a Socket.IO namespace `/ws` for real‑time events. Authentication uses Discord OAuth2. The backend stores session information using an encrypted cookie. It persists data for users, hubs, roles, permissions, messages, direct messages, reports and other entities in MongoDB. Permissions are enforced server‑side through a bitset engine. The frontend uses TanStack Query for data fetching and caching. Socket.IO is used on the client to join channels and receive events. End‑to‑end encryption for direct messages is performed client‑side using the Web Crypto API. Only ciphertext is stored on the server. Stripe is integrated for dynamic product and subscription creation. The developer API is described in the `openapi.json` file and served with Swagger UI.
+
+File Map
+
+backend/
+- package.json: Node dependencies and scripts for the API server.
+- tsconfig.json: TypeScript configuration targeting Node. Emit builds to `dist`.
+- src/app.ts: Entry point for the API server. Configures Express, sockets, database connection, routes, middleware and error handling.
+- src/config/index.ts: Loads environment variables and exports a configuration object.
+- src/models: Mongoose schemas for User, Hub, Category, Channel, RoleGroup, Role, Membership, Message, DMThread, EncryptedDMMessage, Block, Ignore, Report, Bot, Webhook, Invite, ApiKey, AuditLog, Subscription, Boost.
+- src/controllers: Functions implementing route handlers. Each controller is responsible for a domain: auth, users, hubs, channels, messages, dms, reports, admin actions.
+- src/routes: Express routers wiring paths to controllers. Namespaces include `/auth`, `/api/users`, `/api/hubs`, `/api/channels`, `/api/dm`, `/api/admin`, `/api/billing`.
+- src/middleware: Express middleware for authentication, rate limiting, CORS, Helmet, permission enforcement, error handling.
+- src/utils: Utility functions for permissions, mentions, encryption, Discord OAuth, Stripe integration, rate limiting and ID generation.
+- src/sockets/index.ts: Socket.IO server configuration. Handles connection authentication, room joining, message broadcasting, typing indicators and presence.
+
+frontend/
+- package.json: Dependencies and scripts for the Next.js client.
+- next.config.js: Next.js configuration enabling experimental app directory.
+- tailwind.config.js and postcss.config.js: Styling configuration.
+- tsconfig.json: TypeScript config for the client.
+- app/layout.tsx: Root layout defining HTML structure and theme providers.
+- app/page.tsx: Home page with login redirect logic.
+- app/login/page.tsx: Discord login button.
+- app/hubs/page.tsx: Lists the user’s hubs with creation option.
+- app/hub/[id]/page.tsx: Hub overview with categories and channels.
+- app/hub/[id]/channel/[channelId]/page.tsx: Real‑time chat page using Socket.IO.
+- app/dm/[threadId]/page.tsx: Encrypted DM conversation page.
+- components: Reusable UI components such as sidebars, chat input, message list, role editor and permission editor.
+- lib: API helpers, hooks, Socket.IO client, encryption logic and constants.
+
+Configuration and Environment Variables
+
+Global variables are defined in `.env` and loaded by both services. Key variables include:
+- `MONGODB_URI`: Connection string for MongoDB Atlas.
+- `DISCORD_CLIENT_ID` and `DISCORD_CLIENT_SECRET`: Credentials for Discord OAuth2.
+- `SESSION_SECRET`: Secret used to sign and encrypt session cookies.
+- `OWNER_DISCORD_ID`: Discord ID of the global owner. The first login matching this ID grants global owner privileges.
+- `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`: Stripe keys for billing integration.
+- `NEXT_PUBLIC_API_URL`: Base URL of the backend API exposed to the client.
+- `NEXT_PUBLIC_SOCKET_URL`: Base URL of the WebSocket server.
+- `CLIENT_URL`: Base URL of the frontend, used for OAuth redirect.
+
+Common Edits
+
+To change the name or branding of the platform, adjust variables in `frontend/app/layout.tsx` and the Tailwind configuration. Adding new permissions involves updating the enum in `backend/src/utils/permissions.ts` and adjusting the role editor UI. To add new models or endpoints, create a schema in `backend/src/models`, a controller, a route and update the OpenAPI specification. For UI changes, modify or add components in the `frontend/components` directory and update the pages accordingly.
+
+Debugging
+
+During development, both services log to the console. Use `npm run dev` to start them concurrently. The backend writes debug output using the built‑in `debug` utility. You can enable verbose MongoDB logging by setting `DEBUG=mongo,mongoose`. Socket.IO events can be monitored in the browser’s developer console. For encrypted DMs, inspect the encryption helper in `frontend/lib/encryption.ts` to trace key generation. To trace API calls, use the network tab or the Swagger UI served at `/api/docs`. For deployment issues, review Render logs and ensure that environment variables are correctly configured.
+
+Security Explanation
+
+Authentication relies on the OAuth2 Authorization Code flow with Discord. The server exchanges the authorization code for an access token and stores a session on the server using encrypted cookies. Tokens and sensitive data are never exposed to the client. Rate limiting is applied to authentication and messaging endpoints to mitigate abuse. Helmet is used to set secure HTTP headers. CORS is restricted to the configured client origin. All permissions checks occur server‑side using a bitset engine to prevent privilege escalation. Messages are validated using Zod before insertion. End‑to‑end encryption for DMs is performed entirely client‑side; the server stores only ciphertext. API keys, webhooks and bot tokens are hashed before storage. Stripe keys are kept server‑side and webhooks verify signatures before processing. The audit log records all sensitive actions including role changes, bans and billing events. Reports are stored immutably and only accessible by authorized moderators or the global owner. Environment variables must never be committed to version control.
+
+TODO: Detail advanced debugging techniques for production

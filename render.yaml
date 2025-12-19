@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: chat-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: node dist/app.js
+    runtimeEnvVars:
+      NODE_ENV: production
+      PORT: 4000
+    envVars:
+      - key: MONGODB_URI
+        fromSecret: MONGODB_URI
+      - key: DISCORD_CLIENT_ID
+        fromSecret: DISCORD_CLIENT_ID
+      - key: DISCORD_CLIENT_SECRET
+        fromSecret: DISCORD_CLIENT_SECRET
+      - key: SESSION_SECRET
+        fromSecret: SESSION_SECRET
+      - key: OWNER_DISCORD_ID
+        fromSecret: OWNER_DISCORD_ID
+      - key: STRIPE_SECRET_KEY
+        fromSecret: STRIPE_SECRET_KEY
+      - key: STRIPE_WEBHOOK_SECRET
+        fromSecret: STRIPE_WEBHOOK_SECRET
+      - key: CLIENT_URL
+        fromSecret: CLIENT_URL
+  - type: web
+    name: chat-frontend
+    env: node
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: npm run start --workspace frontend
+    runtimeEnvVars:
+      NODE_ENV: production
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://chat-backend.onrender.com
+      - key: NEXT_PUBLIC_SOCKET_URL
+        value: wss://chat-backend.onrender.com

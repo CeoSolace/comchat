@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply min-h-screen bg-gray-100 text-gray-900;
+}
+
+TODO: Add custom CSS variables for theme
