@@ -31,4 +31,4 @@ export function decrypt(ciphertext: CipherText, key: Buffer): string {
   return decrypted.toString('utf8')
 }
 
-TODO: Support key rotation and per‑device keys
+// TODO: Support key rotation and per‑device keys

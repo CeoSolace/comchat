@@ -21,4 +21,4 @@ export { Invite } from './invite'
 export { ApiKey } from './apiKey'
 export * from '../utils/permissions'
 
-TODO: Consolidate model indexing logic
+// TODO: Consolidate model indexing logic

@@ -7,4 +7,4 @@ const api = axios.create({
 
 export default api
 
-TODO: Add interceptors for error handling and retry
+// TODO: Add interceptors for error handling and retry

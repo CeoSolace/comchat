@@ -12,4 +12,4 @@ module.exports = {
   plugins: [],
 }
 
-TODO: Extend theme with custom colors and typography
+// TODO: Extend theme with custom colors and typography

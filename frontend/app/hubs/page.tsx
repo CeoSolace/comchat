@@ -48,4 +48,4 @@ export default function HubsPage() {
   )
 }
 
-TODO: Add hub sorting and filtering
+// TODO: Add hub sorting and filtering

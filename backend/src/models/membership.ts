@@ -9,4 +9,4 @@ const MembershipSchema = new mongoose.Schema({
 
 export const Membership = mongoose.model('Membership', MembershipSchema)
 
-TODO: Track nickname and pending status
+// TODO: Track nickname and pending status

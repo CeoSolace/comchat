@@ -24,4 +24,4 @@ export async function getUser(accessToken: string) {
   return res.data
 }
 
-TODO: Implement token refresh for persistent sessions
+// TODO: Implement token refresh for persistent sessions

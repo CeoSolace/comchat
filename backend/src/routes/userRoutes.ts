@@ -10,4 +10,4 @@ router.delete('/block/:id', requireAuth, unblockUser)
 router.post('/ignore/:id', requireAuth, ignoreUser)
 router.delete('/ignore/:id', requireAuth, unignoreUser)
 
-TODO: Add routes for DM threads and profile updates
+// TODO: Add routes for DM threads and profile updates

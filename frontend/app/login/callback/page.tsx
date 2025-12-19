@@ -23,4 +23,4 @@ export default function LoginCallbackPage() {
   return <div className="p-4">Authenticating...</div>
 }
 
-TODO: Handle error states and display messages
+// TODO: Handle error states and display messages

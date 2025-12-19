@@ -8,4 +8,4 @@ if [ -f "$ZIP_NAME" ]; then
 fi
 zip -r "$ZIP_NAME" . -x "*.git*" -x "*.DS_Store" -x "$ZIP_NAME"
 exit 0
-TODO: Add checksum verification
+# TODO: Add checksum verification

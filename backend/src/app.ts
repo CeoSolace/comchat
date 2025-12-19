@@ -51,4 +51,4 @@ start().catch((err) => {
   process.exit(1)
 })
 
-TODO: Extract server creation for testing
+// TODO: Extract server creation for testing

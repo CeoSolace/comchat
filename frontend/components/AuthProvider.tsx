@@ -45,4 +45,4 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
 
 export const useAuth = () => useContext(AuthContext)
 
-TODO: Handle token refresh and session expiry
+// TODO: Handle token refresh and session expiry

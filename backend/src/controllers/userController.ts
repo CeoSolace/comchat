@@ -44,4 +44,4 @@ export async function unignoreUser(req: Request, res: Response) {
   res.json({ ignored: false })
 }
 
-TODO: Add user settings update endpoint
+// TODO: Add user settings update endpoint

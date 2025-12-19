@@ -20,4 +20,4 @@ export default function Home() {
   return null
 }
 
-TODO: Show loading spinner while redirecting
+// TODO: Show loading spinner while redirecting

@@ -30,4 +30,4 @@ export async function handleWebhook(event: Stripe.Event) {
   }
 }
 
-TODO: Implement dynamic price creation and subscription updates
+// TODO: Implement dynamic price creation and subscription updates

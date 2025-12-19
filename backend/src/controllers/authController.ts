@@ -48,4 +48,4 @@ export async function me(req: Request, res: Response) {
   res.json({ id: user.id, username: user.username, avatar: user.avatar, discriminator: user.discriminator, isOwner: user.isOwner })
 }
 
-TODO: Store refresh tokens securely and implement revoke
+// TODO: Store refresh tokens securely and implement revoke

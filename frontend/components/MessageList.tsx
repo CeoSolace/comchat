@@ -46,4 +46,4 @@ export default function MessageList({ channelId }: Props) {
   )
 }
 
-TODO: Highlight mentions and show avatars
+// TODO: Highlight mentions and show avatars

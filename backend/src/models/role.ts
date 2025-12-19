@@ -10,4 +10,4 @@ const RoleSchema = new mongoose.Schema({
 
 export const Role = mongoose.model('Role', RoleSchema)
 
-TODO: Add role color and position
+// TODO: Add role color and position

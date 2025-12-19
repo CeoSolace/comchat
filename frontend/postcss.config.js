@@ -5,4 +5,4 @@ module.exports = {
   },
 }
 
-TODO: Configure additional PostCSS plugins if needed
+// TODO: Configure additional PostCSS plugins if needed

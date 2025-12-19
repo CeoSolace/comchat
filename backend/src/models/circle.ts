@@ -10,4 +10,4 @@ const CircleSchema = new mongoose.Schema({
 
 export const Circle = mongoose.model('Circle', CircleSchema)
 
-TODO: Add circle invites and roles
+// TODO: Add circle invites and roles

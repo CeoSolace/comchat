@@ -17,4 +17,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   )
 }
 
-TODO: Add theme provider and notification system
+// TODO: Add theme provider and notification system

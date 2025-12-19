@@ -8,4 +8,4 @@ const DMThreadSchema = new mongoose.Schema({
 
 export const DMThread = mongoose.model('DMThread', DMThreadSchema)
 
-TODO: Add DM settings like disappearing messages
+// TODO: Add DM settings like disappearing messages

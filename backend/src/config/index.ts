@@ -15,4 +15,4 @@ export const config = {
   nodeEnv: process.env.NODE_ENV || 'development'
 }
 
-TODO: Validate presence of required configuration values
+// TODO: Validate presence of required configuration values

@@ -9,4 +9,4 @@ const WebhookSchema = new mongoose.Schema({
 
 export const Webhook = mongoose.model('Webhook', WebhookSchema)
 
-TODO: Add last used timestamp and expiration
+// TODO: Add last used timestamp and expiration

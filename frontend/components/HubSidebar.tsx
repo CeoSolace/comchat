@@ -31,4 +31,4 @@ export default function HubSidebar({ hubId }: { hubId: string }) {
   )
 }
 
-TODO: Add new category and channel creation UI
+// TODO: Add new category and channel creation UI

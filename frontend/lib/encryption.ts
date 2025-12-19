@@ -20,4 +20,4 @@ export async function decrypt(ciphertext: { iv: string; data: string }, key: Cry
   return new TextDecoder().decode(decrypted)
 }
 
-TODO: Derive keys from user secrets and handle device storage
+// TODO: Derive keys from user secrets and handle device storage

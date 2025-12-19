@@ -9,4 +9,4 @@ router.get('/callback', callback)
 router.post('/logout', logout)
 router.get('/me', requireAuth, me)
 
-TODO: Add route to revoke sessions
+// TODO: Add route to revoke sessions

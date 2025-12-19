@@ -8,4 +8,4 @@ const CategorySchema = new mongoose.Schema({
 
 export const Category = mongoose.model('Category', CategorySchema)
 
-TODO: Track visibility and channel count
+// TODO: Track visibility and channel count

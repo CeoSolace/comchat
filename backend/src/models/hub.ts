@@ -10,4 +10,4 @@ const HubSchema = new mongoose.Schema({
 
 export const Hub = mongoose.model('Hub', HubSchema)
 
-TODO: Add hub settings and subscription tier
+// TODO: Add hub settings and subscription tier

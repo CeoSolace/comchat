@@ -34,4 +34,4 @@ export async function globalBanUser(req: Request, res: Response) {
   res.json({ banned: true })
 }
 
-TODO: Add search and audit log endpoints
+// TODO: Add search and audit log endpoints

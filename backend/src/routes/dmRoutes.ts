@@ -9,4 +9,4 @@ router.post('/thread', requireAuth, openThread)
 router.get('/threads/:threadId/messages', requireAuth, getDmMessages)
 router.post('/threads/:threadId/messages', requireAuth, sendDmMessage)
 
-TODO: Add DM attachments and encryption key exchange
+// TODO: Add DM attachments and encryption key exchange

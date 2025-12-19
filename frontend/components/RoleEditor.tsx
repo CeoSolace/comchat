@@ -9,4 +9,4 @@ export default function RoleEditor() {
   )
 }
 
-TODO: Implement full role editor with permission toggles and previews
+// TODO: Implement full role editor with permission toggles and previews

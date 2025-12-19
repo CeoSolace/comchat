@@ -8,4 +8,4 @@ router.get('/reports', requireAuth, getReports)
 router.delete('/reports/:id', requireAuth, dismissReport)
 router.post('/ban/:id', requireAuth, globalBanUser)
 
-TODO: Add endpoints for hub deletion and maintenance mode
+// TODO: Add endpoints for hub deletion and maintenance mode

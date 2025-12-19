@@ -19,4 +19,4 @@ export default function LoginPage() {
   )
 }
 
-TODO: Show Discord branding and CTA animations
+// TODO: Show Discord branding and CTA animations

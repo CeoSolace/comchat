@@ -11,4 +11,4 @@ const nextConfig = {
 
 module.exports = nextConfig
 
-TODO: Enable SWC minify and production profiling
+// TODO: Enable SWC minify and production profiling

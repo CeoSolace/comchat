@@ -12,4 +12,4 @@ const UserSchema = new mongoose.Schema({
 
 export const User = mongoose.model('User', UserSchema)
 
-TODO: Store per‑user settings and preferences
+// TODO: Store per‑user settings and preferences

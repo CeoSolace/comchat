@@ -59,4 +59,4 @@ export function useSendMessage(channelId: string) {
   })
 }
 
-TODO: Create hooks for DMs and roles
+// TODO: Create hooks for DMs and roles

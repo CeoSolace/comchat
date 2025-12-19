@@ -15,4 +15,4 @@ const EncryptedDMMessageSchema = new mongoose.Schema({
 
 export const EncryptedDMMessage = mongoose.model('EncryptedDMMessage', EncryptedDMMessageSchema)
 
-TODO: Add support for message expiry
+// TODO: Add support for message expiry

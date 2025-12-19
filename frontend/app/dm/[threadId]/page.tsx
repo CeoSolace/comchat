@@ -13,4 +13,4 @@ export default function DMThreadPage() {
   )
 }
 
-TODO: Implement DM UI with encryption helpers
+// TODO: Implement DM UI with encryption helpers

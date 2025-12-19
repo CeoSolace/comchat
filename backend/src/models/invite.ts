@@ -12,4 +12,4 @@ const InviteSchema = new mongoose.Schema({
 
 export const Invite = mongoose.model('Invite', InviteSchema)
 
-TODO: Track assigned roles on invite accept
+// TODO: Track assigned roles on invite accept

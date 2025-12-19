@@ -28,4 +28,4 @@ export function initSockets(io: Server) {
   })
 }
 
-TODO: Add authentication and permissions enforcement on socket events
+// TODO: Add authentication and permissions enforcement on socket events

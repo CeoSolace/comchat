@@ -29,4 +29,4 @@ export function parseMentions(content: string, limit = 5): MentionResult {
   return { userIds, roleIds, everyone, here }
 }
 
-TODO: Enhance mention parsing to resolve IDs by name server‑side
+// TODO: Enhance mention parsing to resolve IDs by name server‑side

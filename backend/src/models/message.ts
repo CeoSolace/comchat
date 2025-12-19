@@ -21,4 +21,4 @@ const MessageSchema = new mongoose.Schema({
 
 export const Message = mongoose.model('Message', MessageSchema)
 
-TODO: Add thread replies and embed metadata
+// TODO: Add thread replies and embed metadata

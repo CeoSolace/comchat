@@ -39,4 +39,4 @@ export function applyOverride(base: PermissionBitset, override: Override): Permi
   return (base & ~override.deny) | override.allow
 }
 
-TODO: Implement granular override resolution with role priorities
+// TODO: Implement granular override resolution with role priorities

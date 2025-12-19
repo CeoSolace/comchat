@@ -63,4 +63,4 @@ export async function deleteMessage(req: Request, res: Response) {
   res.json({ deleted: true })
 }
 
-TODO: Add edit message and reaction handling
+// TODO: Add edit message and reaction handling

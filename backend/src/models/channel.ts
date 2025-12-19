@@ -18,4 +18,4 @@ const ChannelSchema = new mongoose.Schema({
 
 export const Channel = mongoose.model('Channel', ChannelSchema)
 
-TODO: Add slow mode, topic and pinned messages
+// TODO: Add slow mode, topic and pinned messages

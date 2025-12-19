@@ -9,4 +9,4 @@ export default function PermissionsEditor() {
   )
 }
 
-TODO: Build UI for editing permissions across categories and channels
+// TODO: Build UI for editing permissions across categories and channels

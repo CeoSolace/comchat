@@ -14,4 +14,4 @@ export async function requireAuth(req: Request, res: Response, next: NextFunctio
   next()
 }
 
-TODO: Add token based auth fallback for API keys
+// TODO: Add token based auth fallback for API keys

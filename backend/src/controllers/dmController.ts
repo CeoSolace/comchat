@@ -44,4 +44,4 @@ export async function sendDmMessage(req: Request, res: Response) {
   res.status(201).json(message)
 }
 
-TODO: Add DM deletion and attachments
+// TODO: Add DM deletion and attachments

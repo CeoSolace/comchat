@@ -8,4 +8,4 @@ const BlockSchema = new mongoose.Schema({
 
 export const Block = mongoose.model('Block', BlockSchema)
 
-TODO: Add block reason
+// TODO: Add block reason

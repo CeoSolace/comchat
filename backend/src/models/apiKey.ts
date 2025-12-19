@@ -10,4 +10,4 @@ const ApiKeySchema = new mongoose.Schema({
 
 export const ApiKey = mongoose.model('ApiKey', ApiKeySchema)
 
-TODO: Add last used timestamp and revocation state
+// TODO: Add last used timestamp and revocation state

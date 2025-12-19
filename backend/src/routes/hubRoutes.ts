@@ -9,4 +9,4 @@ router.post('/', requireAuth, createHub)
 router.get('/:id', requireAuth, getHub)
 router.delete('/:id', requireAuth, deleteHub)
 
-TODO: Add routes for categories, members and invites
+// TODO: Add routes for categories, members and invites

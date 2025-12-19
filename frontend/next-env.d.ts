@@ -3,4 +3,4 @@
 /// <reference types="next/image-types/global" />
 
 
-TODO: Keep declarations updated with next releases
+// TODO: Keep declarations updated with next releases

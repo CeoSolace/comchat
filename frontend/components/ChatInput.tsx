@@ -36,4 +36,4 @@ export default function ChatInput({ channelId }: { channelId: string }) {
   )
 }
 
-TODO: Support attachments, emoji picker and mentions autocomplete
+// TODO: Support attachments, emoji picker and mentions autocomplete

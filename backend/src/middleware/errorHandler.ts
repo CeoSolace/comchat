@@ -9,4 +9,4 @@ export function errorHandler(err: any, req: Request, res: Response, next: NextFu
   res.status(status).json({ error: err.message || 'Internal server error' })
 }
 
-TODO: Standardize error responses with codes
+// TODO: Standardize error responses with codes

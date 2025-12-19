@@ -38,4 +38,4 @@ export function requireChannelPermission(required: PermissionFlags) {
   }
 }
 
-TODO: Implement hub‑level permission middleware
+// TODO: Implement hub‑level permission middleware

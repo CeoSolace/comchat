@@ -10,4 +10,4 @@ const BoostSchema = new mongoose.Schema({
 
 export const Boost = mongoose.model('Boost', BoostSchema)
 
-TODO: Add expiration and stacking rules
+// TODO: Add expiration and stacking rules

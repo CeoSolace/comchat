@@ -9,4 +9,4 @@ if (Test-Path $ZipName) {
 Add-Type -AssemblyName 'System.IO.Compression.FileSystem'
 [System.IO.Compression.ZipFile]::CreateFromDirectory($Root, $ZipName)
 return
-TODO: Add signature generation
+# TODO: Add signature generation

@@ -11,4 +11,4 @@ const SubscriptionSchema = new mongoose.Schema({
 
 export const Subscription = mongoose.model('Subscription', SubscriptionSchema)
 
-TODO: Store entitlements and boost counts
+// TODO: Store entitlements and boost counts

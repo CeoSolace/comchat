@@ -60,4 +60,4 @@ export async function deleteHub(req: Request, res: Response) {
   res.json({ deleted: true })
 }
 
-TODO: Implement hub settings update and member management
+// TODO: Implement hub settings update and member management

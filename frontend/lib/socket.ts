@@ -18,4 +18,4 @@ export function useSocket() {
   return socketRef.current
 }
 
-TODO: Expose socket events as React hooks
+// TODO: Expose socket events as React hooks

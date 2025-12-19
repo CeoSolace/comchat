@@ -11,4 +11,4 @@ const AuditLogSchema = new mongoose.Schema({
 
 export const AuditLog = mongoose.model('AuditLog', AuditLogSchema)
 
-TODO: Log IP address and user agent
+// TODO: Log IP address and user agent

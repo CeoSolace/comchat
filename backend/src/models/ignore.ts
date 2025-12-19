@@ -8,4 +8,4 @@ const IgnoreSchema = new mongoose.Schema({
 
 export const Ignore = mongoose.model('Ignore', IgnoreSchema)
 
-TODO: Add optional expiration
+// TODO: Add optional expiration

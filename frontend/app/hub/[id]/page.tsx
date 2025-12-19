@@ -20,4 +20,4 @@ export default function HubPage() {
   return <div>Loading hub...</div>
 }
 
-TODO: Show hub overview and list of members
+// TODO: Show hub overview and list of members

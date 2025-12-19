@@ -8,4 +8,4 @@ const RoleGroupSchema = new mongoose.Schema({
 
 export const RoleGroup = mongoose.model('RoleGroup', RoleGroupSchema)
 
-TODO: Add group order and visibility settings
+// TODO: Add group order and visibility settings

@@ -10,4 +10,4 @@ const BotSchema = new mongoose.Schema({
 
 export const Bot = mongoose.model('Bot', BotSchema)
 
-TODO: Track bot status and permissions
+// TODO: Track bot status and permissions

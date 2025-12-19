@@ -11,4 +11,4 @@ router.get('/:channelId/messages', requireAuth, requireChannelPermission(Permiss
 router.post('/:channelId/messages', requireAuth, requireChannelPermission(PermissionFlags.SendMessages), postMessage)
 router.delete('/:channelId/messages/:messageId', requireAuth, deleteMessage)
 
-TODO: Add channel update and delete routes
+// TODO: Add channel update and delete routes

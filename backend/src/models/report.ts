@@ -11,4 +11,4 @@ const ReportSchema = new mongoose.Schema({
 
 export const Report = mongoose.model('Report', ReportSchema)
 
-TODO: Add report state and moderator notes
+// TODO: Add report state and moderator notes

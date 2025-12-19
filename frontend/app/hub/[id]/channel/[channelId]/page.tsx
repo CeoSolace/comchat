@@ -22,4 +22,4 @@ export default function ChannelPage() {
   )
 }
 
-TODO: Add channel header with actions and members list
+// TODO: Add channel header with actions and members list
